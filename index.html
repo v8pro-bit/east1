@@ -1,45 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8"/>
-        <title>CrackStreams - Stream Live Sports NFL, MLB, NBA, NHL and Soccer</title>
-        <meta name="description" content="Stream live sports with Crackstreams. Enjoy HD-quality streams of NBA, NFL, UFC, soccer, and more, all for free. Your go-to platform for live sports action.">
-            <meta name="keywords" content="CrackStreams, no login Sports Streams, free sports streaming, live NFL streams, NBA streams USA, UFC streams free, sports streaming platform, live sports USA,  watch live sports, free sports streaming, watch tv channels online, free tv streaming, no registration streaming"/>
-            
-            <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <meta name="robots" content="index, follow"/>
-            <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"/>
-            <link href="css/style.css" rel="stylesheet"/>
-            
-            <link rel="shortcut icon" type="image/x-icon" href="./images/watch-live-soccer-streams-icon.png"/>
+ <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ✅ Title & Description for SEO -->
+  <title>StreamEast - Free Live Sports Streams | Football, MMA, and More</title>
+  <meta name="description" content="Watch NFL, NBA, UFC, Boxing, Formula 1 and more live on StreamEast.lol. HD sports streaming with zero buffering. 100% free and always updated!" />
+  <meta name="keywords" content="StreamEast, streameast.lol, live sports streaming, NFL live, NBA live, UFC live, free boxing streams, watch sports online, HD sports, stream football, MMA, Formula 1 live" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://streameast.lol/" />
+
+  <!-- ✅ Favicon & App Icons -->
+  <link rel="icon" type="image/png" sizes="196x196" href="https://cdn-icons-png.flaticon.com/128/9605/9605589.png" />
+  <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/128/9605/9605589.png" />
+
+  <!-- ✅ PWA Manifest -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="theme-color" content="#152a3f" />
+
+  <!-- ✅ Open Graph (Facebook, LinkedIn etc.) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://streameast.lol/" />
+  <meta property="og:title" content="StreamEast.lol - Watch Free Live Sports" />
+  <meta property="og:description" content="Stream all your favorite sports live in HD. Watch NFL, NBA, UFC, F1 and more only on StreamEast.lol. 100% free sports streaming." />
+  <meta property="og:image" content="https://cdn-icons-png.flaticon.com/128/9605/9605589.png" />
+
+  <!-- ✅ Twitter Card -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://streameast.lol/" />
+  <meta property="twitter:title" content="StreamEast.lol - Watch Live Sports in HD" />
+  <meta property="twitter:description" content="Stream NFL, NBA, UFC, Boxing, and more live in HD for free on StreamEast.lol. No subscriptions. Just sports!" />
+  <meta property="twitter:image" content="https://cdn-icons-png.flaticon.com/128/9605/9605589.png" />
+  <meta name="google-site-verification" content="4DDodOwwScl7ett1qROJ94zHgUs-87Az9-XUKSZOfDg" /> 
+     <style>
+     html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  background: linear-gradient(#242625 25%, #303133 50%, #303133 50%, #242625 100%);
+  color: #a4a8a4;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+}
+
+a {
+  transition: all .3s;
+  color: #b1b4b1;
+}
+
+a:hover {
+  color: #cbcdcb;
+}
+
+strong {
+  font-weight: 500;
+  color: #00acc1;
+}
+
+.container {
+  max-width: 650px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.content {
+  position: absolute;
+  width: 100%;
+}
+
+.content .header {
+  padding: 3.5rem 0 .3rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin: 0 2rem;
+}
+
+.content .header p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #e5e5e5;
+}
+
+.content .main {
+  position: relative;
+  margin: 0 1rem;
+  z-index: 1;
+  background: #1e201f;
+  border-radius: .7rem;
+  padding: 1.5rem;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .1), inset 0 3px 3px rgba(0, 0, 0, .5);
+  margin-bottom: 1rem;
+}
+
+.content .main ul.m-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.content .main ul.m-list li {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  background: #242625;
+  padding: .5rem .8rem;
+  margin: .3rem 0;
+  border-radius: .4rem;
+  border: 1px solid #3e403f;
+  color: #777b77;
+  text-decoration: none;
+  transition: border-color .3s, background .3s;
+}
+
+.content .main ul.m-list li span:first-child {
+  font-weight: 600;
+  color: #e5e5e5;
+}
+
+.faq img {
+  margin: 0 auto;
+  display: block;
+}
+
+.content .main ul.m-list li span:last-child {
+  display: inline-block;
+  align-items: center;
+  transition: color .3s;
+}
+
+.content .main ul.m-list li span:last-child:before {
+  content: " ";
+  display: inline-block;
+  background: #00acc1;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: .3rem;
+}
+
+.content .main ul.m-list li:hover {
+  background: #003a42;
+  border-color: #00acc1;
+}
+
+.content .main ul.m-list li:hover span:last-child {
+  color: #e5e5e5;
+}
+
+.content .main .notice {
+  background: #131514;
+  padding: .9rem 1rem .4rem;
+  border-radius: .5rem;
+  display: flex;
+}
+
+.content .main .notice .start {
+  display: flex;
+  margin-right: .5rem;
+}
+
+.content .main .notice .start i {
+  font-size: 1.1rem;
+  color: #e5e5e5;
+}
+
+.content .main .notice .stop {
+  margin-top: .1rem;
+  font-size: .8rem;
+}
+
+.content .main .notice .stop .heading {
+  font-weight: 400;
+  color: #e5e5e5;
+  font-size: .9rem;
+}
+
+.content .main .notice .stop .twitter {
+  background: #00acc1;
+  border-radius: .2rem;
+  padding: .2rem .5rem;
+  display: inline-block;
+  color: #131514;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: .4rem;
+  font-size: .8rem;
+}
+
+.content .main .notice .stop .twitter:hover {
+  background: #00d9f4;
+}
+
+.content .main .faq {
+  margin-top: 1.8rem;
+}
+
+.content .main .faq h3 {
+  font-size: .9rem;
+  font-weight: 500;
+  color: #e5e5e5;
+}
+
+.content .footer {
+  text-align: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 2rem;
+}
+
+.wrap {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin: 0 auto;
+  perspective: 360px;
+  perspective-origin: 50% 50%;
+}
+
+.top-plane,
+.bottom-plane {
+  width: 200%;
+  height: 130%;
+  position: absolute;
+  bottom: -30%;
+  left: -50%;
+  background-image: -webkit-linear-gradient(#303133 2px, transparent 2px),
+    -webkit-linear-gradient(left, #303133 2px, transparent 2px);
+  background-size: 100px 100px, 100px 100px;
+  background-position: -1px -1px, -1px -1px;
+  transform: rotateX(85deg);
+  animation: planeMoveTop 2s infinite linear;
+  z-index: 0;
+}
+
+.bottom-plane {
+  transform: rotateX(-85deg);
+  top: -30%;
+  animation: planeMoveBot 2s infinite linear;
+}
+     
+.post-icons {
+  display: none;
+}
+
+@keyframes planeMoveTop {
+  from {
+    background-position: 0px -100px, 0px 0px;
+  }
+  to {
+    background-position: 0px 0px, 100px 0px;
+  }
+}
+
+@keyframes planeMoveBot {
+  from {
+    background-position: 0px 0px, 0px 0px;
+  }
+  to {
+    background-position: 0px -100px, 100px 0px;
+  }
+}
+
+@media (max-height: 350px) {
+  .wrap {
+    perspective: 210px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .faq img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+   </style>
            
     </head>
     <body>
         <div class="content">
             <div class="container">
                 <div class="header">
-                    <img src="images/watch-live-soccer-streams-logo.png" width="133" height="66" alt="CrackStreams">
-                        <h1>CrackStreams - Stream Live Sports NFL, MLB, NBA, NHL and Soccer</h1>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Den%C3%ADk_Sport_logo.svg/1200px-Den%C3%ADk_Sport_logo.svg.png" width="133" height="66" alt="StreamEast">
+                    <h1>StreamEast - Free Live Sports Streams | Football, MMA, and More</h1>
                 </div>
                 <div class="main">
-                    <span>Please press Ctrl + D to bookmark this site to keep update about CrackStreams-official domains.</span>
+                    <span>Please press Ctrl + D to bookmark this site to keep update about StreamEast-official domains.</span>
                     <ul class="m-list">
-                        <li class="bntl">
-                            <span>StreamEast NFL</span>
-                            <span>live</span>
-                        </li>
                         <li class="bntl">
                             <span>StreamEast NBA</span>
                             <span>live</span>
                         </li>
                         <li class="bntl">
-                            <span>StreamEast Soccer</span>
+                            <span>StreamEast NHL</span>
+                            <span>live</span>
+                        </li>
+                        <li class="bntl">
+                            <span>StreamEast MLB</span>
                             <span>live</span>
                         </li>
                         
                         <li class="bntl">
-                            <span>StreamEast Sports</span>
+                            <span>StreamEast NCAA</span>
+                            <span>live</span>
+                        </li>
+                       <li class="bntl">
+                            <span>StreamEast MMA</span>
+                            <span>live</span>
+                        </li>
+                       <li class="bntl">
+                            <span>StreamEast BOXING</span>
                             <span>live</span>
                         </li>
                     </ul>
